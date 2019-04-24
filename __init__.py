@@ -7,4 +7,6 @@ data = pd.read_csv("visitors.csv", skiprows=4, names=headers)
 
 headers = ["data", "visitors_new"]
 data_new = pd.read_csv("visitors-new.csv", skiprows=4, names=headers)
-print(data_new.head())
+# print(data_new.head())
+
+
