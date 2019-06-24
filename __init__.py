@@ -9,4 +9,11 @@ headers = ["data", "visitors_new"]
 data_new = pd.read_csv("visitors-new.csv", skiprows=4, names=headers)
 # print(data_new.head())
 
+data_combined = pd.merge(data, data_new)
+data_combined.sort_values(by=["data"], inplace=True)
+data_combined.set_index("data", inplace=True)
+# print(data_combined.head())
+data_combined.head()
 
+data_combined.plot()
+plt.show()
